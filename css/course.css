@@ -1,0 +1,30 @@
+#courses .display-4 {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#courses .lead {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#courses .row.mb-5 {
+  text-align: center;
+}
+
+#courses .col-12.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+    width: 100%;
+
+    object-fit: cover;
+}

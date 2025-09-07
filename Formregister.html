@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/css/form.css' type='text/css' />
+</head>
+<body>
+    <h3 class="header">Registration Form</h3>
+    <div class="container card-form">
+        <form name="registration" onSubmit="return formValidation();">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your username..">
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname">
+            <label for="lname">Email</label>
+            <input type="text" id="email" name="email">
+            <label for="lname">Address</label>
+            <input type="text" id="address" name="address">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option selected value="">(Please select a country)</option>
+                <option value="TH">Thailand</option>
+                <option value="AU">Australia</option>
+                <option value="CA">Canada</option>
+                <option value="US">USA</option>
+            </select>
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip">
+            <label>Language</label>
+            <div class="form-control">
+                <input type="checkbox" id="language1" name="language" value="en" required>
+                <label for="language1"> English</label>
+                <input type="checkbox" id="language2" name="language" value="th">
+                <label for="language2"> Thai</label>
+            </div>
+            <label>Gender</label>
+            <div class="form-control">
+                <input type="radio" id="msex" name="msex" value="Male" required>
+                <label for="msex">Male</label><br>
+                <input type="radio" id="fsex" name="fsex" value="Female">
+                <label for="fsex">Female</label><br>
+                <input type="radio" id="lgbtq+" name="lsex" value="LGBTQ+">
+                <label for="lgbtq+">LGBTQ+</label><br>
+            </div>
+            <label for="subject">Note</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." rows="5" ></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    
+    <script src="/js/form_validation.js"></script>
+</body>
+</html>
