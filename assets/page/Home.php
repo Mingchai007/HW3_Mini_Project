@@ -301,30 +301,75 @@
                         <label for="Amount" class="form-label">Username</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control disabled" placeholder="Username"
-                                id="CustomerNameInput" onchange="submitBtnChange()">
+                                id="CustomerNameInput">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="Amount" class="form-label">Password</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control disabled" placeholder="Customer Name"
-                                id="CustomerNameInput" onchange="submitBtnChange()">
+                                id="CustomerNameInput">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="Name" class="form-label">IP Address</label>
+                        <label for="Name" class="form-label">First Name</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="IP Address(IPV4)" id="IPAddress"
-                                onchange="submitBtnChange()">
+                            <input type="text" class="form-control" placeholder="First Name" id="FirstNameInput">
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">Last Name</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Last Name" id="LastNameInput">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">Email</label>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email" id="EmailInput">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">Address</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Address" id="AddressInput">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password-confrim" class="form-label ">Country </label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" aria-label="Default select example" id='CountrySelect'
+                                onchange="submitBtnChange()">
+                                <option value="select">Select Country</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">UK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">ZIP Code</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="ZIP Code" id="ZIPCodeInput">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">Language</label>
+                        <div class="input-group mb-3 form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="LanguageInput">
+                            <label class="form-check-label mx-2" for="LanguageInput">English</label>
+                            <input type="checkbox" class="form-check-input" id="LanguageInput2">
+                            <label class="form-check-label mx-2" for="LanguageInput2">Thai</label>
+                        </div>
+                    </div>
+                    
                     <div class="col-md-6">
                         <label for="password-confrim" class="form-label ">Script Name </label>
                         <div class="input-group mb-3">
                             <select class="form-select" aria-label="Default select example" id='ScriptName'
                                 onchange="submitBtnChange()">
                                 <option value="select">Select Script</option>
-                               
+
                             </select>
                         </div>
                     </div>
