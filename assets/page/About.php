@@ -1,13 +1,13 @@
 <div class="container" style="margin-top: 10vh;">
 
-        <div class="card card-body col-4 text-center mb-4">
+        <div class="card card-body col-4 text-center">
             <img src="assets/images/unnamed.webp" class="img-fluid" alt="...">
         </div>
 
         <div class="row">
             <div class="col-md-8 text-dark mb-5">
-                <h2 class="mb-4">About Universitas Bangkok</h2>
-                <p class="lead">Universitas Bangkok, disingkat BU, adalah salah satu universitas swasta tertua dan terbesar di Thailand. Universitas ini mulai beroperasi sejak tahun 1962 di daerah Kluay Nam Thai, Bangkok.</p>
+                <h2 class="mb-4">About Pixelnetwork Studio</h2>
+                <p class="lead">Pixelnetwork Studio, disingkat BU, adalah salah satu universitas swasta tertua dan terbesar di Thailand. Universitas ini mulai beroperasi sejak tahun 1962 di daerah Kluay Nam Thai, Bangkok.</p>
                 
                 <div class="row mt-4">
                     <div class="col-md-6">
@@ -34,9 +34,9 @@
 
                 <div class="mt-4">
                     <h5 class="text-primary">Sejarah Singkat</h5>
-                    <p>Universitas Bangkok telah berkembang pesat sejak didirikan pada tahun 1962 oleh Surat Osathanugrah. Sebagai salah satu universitas swasta tertua di Thailand, BU telah memberikan kontribusi besar dalam dunia pendidikan tinggi Thailand selama lebih dari 60 tahun.</p>
+                    <p>Pixelnetwork Studio telah berkembang pesat sejak didirikan pada tahun 1962 oleh Surat Osathanugrah. Sebagai salah satu universitas swasta tertua di Thailand, BU telah memberikan kontribusi besar dalam dunia pendidikan tinggi Thailand selama lebih dari 60 tahun.</p>
                     
-                    <p>Berlokasi strategis di Phahonyothin Road, Pathum Thani, universitas ini mudah diakses dan menjadi pilihan utama bagi mahasiswa dari berbagai wilayah. Dengan warna khas ungu dan jingga, Universitas Bangkok terus berkomitmen untuk memberikan pendidikan berkualitas tinggi.</p>
+                    <p>Berlokasi strategis di Phahonyothin Road, Pathum Thani, universitas ini mudah diakses dan menjadi pilihan utama bagi mahasiswa dari berbagai wilayah. Dengan warna khas ungu dan jingga, Pixelnetwork Studio terus berkomitmen untuk memberikan pendidikan berkualitas tinggi.</p>
                 </div>
             </div>
         </div>
