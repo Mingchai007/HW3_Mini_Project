@@ -2,7 +2,7 @@
     <div class="row mb-5">
         <div class="col-12 text-center">
             <h2 class="display-4 fw-bold mb-3">
-                <span class="text-primary">Welcome to Pxelnetwork</span>
+                <span class="text-primary">Welcome to Pixelnetwork Studio</span>
             </h2>
             <p class="lead text-muted mb-4">
                 we specialize in building professional websites and digital solutions that empower businesses to
@@ -287,30 +287,6 @@
             <div class="modal-body">
 
                 <div class="row">
-                    <!-- <div class="col-md-6">
-                        <label for="Amount" class="form-label">Discord Customer ID <small id="alartdid"
-                                class="text-danger"></small></label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Discord Customer ID"
-                                id="DiscordCustomerID">
-                            <button class="btn btn-primary" type="button" id="GetName"
-                                onclick='getName()'>GetName</button>
-                        </div>
-                    </div> -->
-                    <div class="col-md-6">
-                        <label for="Amount" class="form-label">Username</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control disabled" placeholder="Username"
-                                id="CustomerNameInput">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Amount" class="form-label">Password</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control disabled" placeholder="Customer Name"
-                                id="CustomerNameInput">
-                        </div>
-                    </div>
                     <div class="col-md-6">
                         <label for="Name" class="form-label">First Name</label>
                         <div class="input-group mb-3">
@@ -338,12 +314,13 @@
                     <div class="col-md-6">
                         <label for="password-confrim" class="form-label ">Country </label>
                         <div class="input-group mb-3">
-                            <select class="form-select" aria-label="Default select example" id='CountrySelect'
-                                onchange="submitBtnChange()">
+                            <select class="form-select" aria-label="Default select example" id='CountrySelect'>
                                 <option value="select">Select Country</option>
                                 <option value="usa">USA</option>
                                 <option value="canada">Canada</option>
                                 <option value="uk">UK</option>
+                                <option value="australia">Australia</option>
+                                <option value="thailand">Thailand</option>
                             </select>
                         </div>
                     </div>
@@ -362,14 +339,37 @@
                             <label class="form-check-label mx-2" for="LanguageInput2">Thai</label>
                         </div>
                     </div>
-                    
                     <div class="col-md-6">
-                        <label for="password-confrim" class="form-label ">Script Name </label>
-                        <div class="input-group mb-3">
-                            <select class="form-select" aria-label="Default select example" id='ScriptName'
-                                onchange="submitBtnChange()">
-                                <option value="select">Select Script</option>
+                        <label for="Name" class="form-label">Gender</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                            <label class="form-check-label" for="radioDefault2">
+                               Female
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                            <label class="form-check-label" for="radioDefault2">
+                               LGBTQ+
+                            </label>
+                        </div>
+                    </div>
 
+                    <div class="col-md-6">
+                        <label for="Name" class="form-label">Education Level</label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" aria-label="Default select example" id='EducationSelect'>
+                                <option value="select">Select Education Level</option>
+                                <option value="highschool">High School</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="phd">PhD</option>
                             </select>
                         </div>
                     </div>
