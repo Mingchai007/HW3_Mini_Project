@@ -284,117 +284,213 @@
                 <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Registration Form</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <form id="RegistrationForm" >
+                <div class="modal-body">
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">First Name</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="First Name" id="FirstNameInput">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">First Name</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="First Name" id="FirstNameInput">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Last Name</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Last Name" id="LastNameInput">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Last Name</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Last Name" id="LastNameInput">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Email</label>
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email" id="EmailInput">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Email</label>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email" id="EmailInput">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Address</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Address" id="AddressInput">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Address</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Address" id="AddressInput">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="password-confrim" class="form-label ">Country </label>
-                        <div class="input-group mb-3">
-                            <select class="form-select" aria-label="Default select example" id='CountrySelect'>
-                                <option value="select">Select Country</option>
-                                <option value="usa">USA</option>
-                                <option value="canada">Canada</option>
-                                <option value="uk">UK</option>
-                                <option value="australia">Australia</option>
-                                <option value="thailand">Thailand</option>
-                            </select>
+                        <div class="col-md-6">
+                            <label for="password-confrim" class="form-label ">Country </label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" aria-label="Default select example" id='CountrySelect'>
+                                    <option value="select">Select Country</option>
+                                    <option value="usa">USA</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">UK</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="thailand">Thailand</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">ZIP Code</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="ZIP Code" id="ZIPCodeInput">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">ZIP Code</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="ZIP Code" id="ZIPCodeInput">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Language</label>
-                        <div class="input-group mb-3 form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="LanguageInput">
-                            <label class="form-check-label mx-2" for="LanguageInput">English</label>
-                            <input type="checkbox" class="form-check-input" id="LanguageInput2">
-                            <label class="form-check-label mx-2" for="LanguageInput2">Thai</label>
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Language</label>
+
+                            <div class="input-group mb-3 form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="LanguageInput">
+                                <label class="form-check-label mx-2" for="LanguageInput">English</label>
+                                <input type="checkbox" class="form-check-input" id="LanguageInput2">
+                                <label class="form-check-label mx-2" for="LanguageInput2">Thai</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Gender</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                            <label class="form-check-label" for="radioDefault1">
-                                Male
-                            </label>
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Gender</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    Female
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    LGBTQ+
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-                            <label class="form-check-label" for="radioDefault2">
-                               Female
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-                            <label class="form-check-label" for="radioDefault2">
-                               LGBTQ+
-                            </label>
+
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Education Level</label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" aria-label="Default select example" id='EducationSelect'>
+                                    <option value="select">Select Education Level</option>
+                                    <option value="highschool">High School</option>
+                                    <option value="bachelor">Bachelor's Degree</option>
+                                    <option value="master">Master's Degree</option>
+                                    <option value="phd">PhD</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <label for="Name" class="form-label">Education Level</label>
-                        <div class="input-group mb-3">
-                            <select class="form-select" aria-label="Default select example" id='EducationSelect'>
-                                <option value="select">Select Education Level</option>
-                                <option value="highschool">High School</option>
-                                <option value="bachelor">Bachelor's Degree</option>
-                                <option value="master">Master's Degree</option>
-                                <option value="phd">PhD</option>
-                            </select>
-                        </div>
-                    </div>
                 </div>
-            </div>
 
-            <div class="modal-footer">
-                <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button> -->
-                <button type="button" class="btn btn-success" id="toastbtn">Submit</button>
-            </div>
+                <div class="modal-footer">
+                    <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button> -->
+                    <button type="submit" class="btn btn-success" name="submit">Submit</button>
+                </div>
+
+            </form>
 
         </div>
     </div>
 </div>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="..." class="rounded me-2" alt="...">
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
     </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
 </div>
+
+
+<?php
+if (isset($_GET['submit'])) {
+    $firstName = trim($_GET['FirstNameInput'] ?? '');
+    $lastName = trim($_GET['LastNameInput'] ?? '');
+    $email = trim($_GET['EmailInput'] ?? '');
+    $address = trim($_GET['AddressInput'] ?? '');
+    $country = $_GET['CountrySelect'] ?? '';
+    $zipCode = trim($_GET['ZipCodeInput'] ?? '');
+    $languages = $_GET['LanguageInput'] ?? [];
+    $gender = $_GET['GenderSelect'] ?? '';
+    $education = $_GET['EducationSelect'] ?? '';
+
+    var_dump($firstName);
+
+    $errors = [];
+
+    // Validate First Name
+    if (empty($firstName)) {
+        $errors[] = "First name is required";
+    } elseif (!preg_match("/^[a-zA-Z\s]+$/", $firstName)) {
+        $errors[] = "First name should only contain letters and spaces";
+    }
+
+    // Validate Last Name
+    if (empty($lastName)) {
+        $errors[] = "Last name is required";
+    } elseif (!preg_match("/^[a-zA-Z\s]+$/", $lastName)) {
+        $errors[] = "Last name should only contain letters and spaces";
+    }
+
+    // Validate Email
+    if (empty($email)) {
+        $errors[] = "Email is required";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format";
+    }
+
+    // Validate Address
+    if (empty($address)) {
+        $errors[] = "Address is required";
+    }
+
+    // Validate Country
+    if (empty($country) || $country === 'select') {
+        $errors[] = "Please select a country";
+    }
+
+    // Validate ZIP Code
+    if (empty($zipCode)) {
+        $errors[] = "ZIP code is required";
+    } elseif (!preg_match("/^[0-9]{5}(-[0-9]{4})?$/", $zipCode)) {
+        $errors[] = "Invalid ZIP code format";
+    }
+
+    // Validate Gender
+    if (empty($gender)) {
+        $errors[] = "Please select a gender";
+    }
+
+    // Validate Education
+    if (empty($education) || $education === 'select') {
+        $errors[] = "Please select an education level";
+    }
+
+    // Display results
+    if (empty($errors)) {
+        echo "<div class='alert alert-success'>Registration successful!</div>";
+        echo "<p><strong>Name:</strong> $firstName $lastName</p>";
+        echo "<p><strong>Email:</strong> $email</p>";
+        echo "<p><strong>Address:</strong> $address</p>";
+        echo "<p><strong>Country:</strong> $country</p>";
+        echo "<p><strong>ZIP Code:</strong> $zipCode</p>";
+        echo "<p><strong>Languages:</strong> " . implode(", ", $languages) . "</p>";
+        echo "<p><strong>Gender:</strong> $gender</p>";
+        echo "<p><strong>Education:</strong> $education</p>";
+    } else {
+        echo "<div class='alert alert-danger'>";
+        echo "<h4>Please fix the following errors:</h4>";
+        echo "<ul>";
+        foreach ($errors as $error) {
+            echo "<li>$error</li>";
+        }
+        echo "</ul>";
+        echo "</div>";
+    }
+}
+?>
