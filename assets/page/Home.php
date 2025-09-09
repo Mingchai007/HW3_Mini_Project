@@ -281,7 +281,7 @@
     <div class="modal-dialog modal-dialog-centered  modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Registration Form</h1>
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Registration Form <i class="bi bi-clipboard2-plus"></i></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form id="RegistrationForm" method="POST" action="assets/backend/register.php">
@@ -381,7 +381,7 @@
 
                 <div class="modal-footer">
                     <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button> -->
-                    <button type="submit" class="btn btn-success" name="submit">Submit</button>
+                    <button type="submit" class="btn btn-success" name="submit">Submit <i class="bi bi-check-circle"></i> </button>
                 </div>
 
             </form>
