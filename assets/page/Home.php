@@ -121,7 +121,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0 course-card">
                             <div class="position-relative">
-                                <img src="assets/images/react.png" class="card-img-top" alt="React Course"
+                                <img src="assets/images/react.png" class="card-img-top " alt="React Course"
                                     style="height: 200px; object-fit: cover;">
                                 <span class="badge bg-success position-absolute top-0 end-0 m-3">NEW</span>
                                 <div class="card-overlay">
@@ -150,8 +150,8 @@
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div>
-                                            <span class="text-muted text-decoration-line-through">$129.99</span>
-                                            <span class="h5 text-primary ms-2">$79.99</span>
+                                            <span class="text-muted text-decoration-line-through">8500</span>
+                                            <span class="h5 text-primary ms-2">7500</span>
                                         </div>
                                         <small class="text-muted">
                                             <i class="fas fa-clock"></i> 24 hours
@@ -197,8 +197,8 @@
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div>
-                                            <span class="text-muted text-decoration-line-through">$149.99</span>
-                                            <span class="h5 text-primary ms-2">$89.99</span>
+                                            <span class="text-muted text-decoration-line-through">8500</span>
+                                            <span class="h5 text-primary ms-2">7500</span>
                                         </div>
                                         <small class="text-muted">
                                             <i class="fas fa-clock"></i> 32 hours
@@ -245,8 +245,8 @@
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div>
-                                            <span class="text-muted text-decoration-line-through">$299.99</span>
-                                            <span class="h5 text-primary ms-2">$149.99</span>
+                                            <span class="text-muted text-decoration-line-through">15000</span>
+                                            <span class="h5 text-primary ms-2">9999</span>
                                         </div>
                                         <small class="text-muted">
                                             <i class="fas fa-clock"></i> 60 hours
@@ -259,11 +259,58 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Course Card 3 -->
+                    <!-- Course Card 4 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0 course-card">
                             <div class="position-relative">
-                                <img src="assets/images/fulldev.png" class="card-img-top" alt="Full-Stack Course"
+                                <img src="assets/images/python.png" class="card-img-top" alt="Full-Stack Course"
+                                    style="height: 200px; object-fit: cover;">
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">PREMIUM</span>
+                                <div class="card-overlay">
+                                    <div class="d-flex align-items-center justify-content-center h-100">
+                                        <i class="fas fa-play-circle text-white" style="font-size: 3rem;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-warning-subtle text-warning">Full-Stack</span>
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(5.0)</small>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Python Developer </h5>
+                                <p class="card-text text-muted">
+                                    Leverage the power of Python to build web applications. This course covers popular frameworks like Django and Flask, teaching you how to build back-end services, handle user authentication, and work with databases.
+                                </p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <span class="text-muted text-decoration-line-through">7500</span>
+                                            <span class="h5 text-primary ms-2">6500</span>
+                                        </div>
+                                        <small class="text-muted">
+                                            <i class="fas fa-clock"></i> 60 hours
+                                        </small>
+                                    </div>
+                                    <button class="btn btn-primary w-100">
+                                        <i class="fas fa-shopping-cart me-2"></i>BUY
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Course Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0 course-card">
+                            <div class="position-relative">
+                                <img src="assets/images/devbackend.png" class="card-img-top" alt="Full-Stack Course"
                                     style="height: 200px; object-fit: cover;">
                                 <span
                                     class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">PREMIUM</span>
@@ -286,14 +333,14 @@
                                     </div>
                                 </div>
                                 <h5 class="card-title">Full-Stack Developer Bootcamp</h5>
-                                <p class="card-text text-muted">
-                                    Complete web development course covering frontend, backend, and deployment.
+                                <p class="card-text text-muted ">
+                                   Learn web development fundamentals and explore modern frameworks. Find resources and tutorials to boost your skills.
                                 </p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div>
-                                            <span class="text-muted text-decoration-line-through">$299.99</span>
-                                            <span class="h5 text-primary ms-2">$149.99</span>
+                                            <span class="text-muted text-decoration-line-through">9500</span>
+                                            <span class="h5 text-primary ms-2">7500</span>
                                         </div>
                                         <small class="text-muted">
                                             <i class="fas fa-clock"></i> 60 hours
@@ -306,11 +353,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Course Card 3 -->
+                    <!-- Course Card 6 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0 course-card">
                             <div class="position-relative">
-                                <img src="assets/images/fulldev.png" class="card-img-top" alt="Full-Stack Course"
+                                <img src="assets/images/Vue.png" class="card-img-top" alt="Full-Stack Course"
                                     style="height: 200px; object-fit: cover;">
                                 <span
                                     class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">PREMIUM</span>
@@ -332,65 +379,18 @@
                                         <small class="text-muted ms-1">(5.0)</small>
                                     </div>
                                 </div>
-                                <h5 class="card-title">Full-Stack Developer Bootcamp</h5>
+                                <h5 class="card-title">VueJs</h5>
                                 <p class="card-text text-muted">
-                                    Complete web development course covering frontend, backend, and deployment.
+                                    Dive deep into the world of Vue.js. This course will teach you how to build modern and interactive web interfaces using Vue 3, Composition API, Vue Router, and Pinia for state management.
                                 </p>
                                 <div class="mt-auto">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <div>
-                                            <span class="text-muted text-decoration-line-through">$299.99</span>
-                                            <span class="h5 text-primary ms-2">$149.99</span>
+                                            <span class="text-muted text-decoration-line-through">9999</span>
+                                            <span class="h5 text-primary ms-2">8999</span>
                                         </div>
                                         <small class="text-muted">
-                                            <i class="fas fa-clock"></i> 60 hours
-                                        </small>
-                                    </div>
-                                    <button class="btn btn-primary w-100">
-                                        <i class="fas fa-shopping-cart me-2"></i>BUY
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Course Card 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm border-0 course-card">
-                            <div class="position-relative">
-                                <img src="assets/images/fulldev.png" class="card-img-top" alt="Full-Stack Course"
-                                    style="height: 200px; object-fit: cover;">
-                                <span
-                                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">PREMIUM</span>
-                                <div class="card-overlay">
-                                    <div class="d-flex align-items-center justify-content-center h-100">
-                                        <i class="fas fa-play-circle text-white" style="font-size: 3rem;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <span class="badge bg-warning-subtle text-warning">Full-Stack</span>
-                                    <div class="text-warning">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <small class="text-muted ms-1">(5.0)</small>
-                                    </div>
-                                </div>
-                                <h5 class="card-title">Full-Stack Developer Bootcamp</h5>
-                                <p class="card-text text-muted">
-                                    Complete web development course covering frontend, backend, and deployment.
-                                </p>
-                                <div class="mt-auto">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <span class="text-muted text-decoration-line-through">$299.99</span>
-                                            <span class="h5 text-primary ms-2">$149.99</span>
-                                        </div>
-                                        <small class="text-muted">
-                                            <i class="fas fa-clock"></i> 60 hours
+                                            <i class="fas fa-clock"></i> 100 hours
                                         </small>
                                     </div>
                                     <button class="btn btn-primary w-100">
