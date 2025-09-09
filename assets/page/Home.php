@@ -284,7 +284,7 @@
                 <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Registration Form</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="RegistrationForm" >
+            <form id="RegistrationForm" method="POST" action="assets/backend/register.php">
                 <div class="modal-body">
 
                     <div class="row">
@@ -392,105 +392,168 @@
     </div>
 </div>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="liveToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+        aria-atomic="true">
+        <!-- <div class="toast-header">
             <img src="..." class="rounded me-2" alt="...">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            Hello, world! This is a toast message.
+        </div> -->
+        <div class="d-flex">
+            <div class="toast-body" id="resultArea">
+                Hello, world! This is a toast message.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
         </div>
     </div>
 </div>
 
 
-<?php
-if (isset($_GET['submit'])) {
-    $firstName = trim($_GET['FirstNameInput'] ?? '');
-    $lastName = trim($_GET['LastNameInput'] ?? '');
-    $email = trim($_GET['EmailInput'] ?? '');
-    $address = trim($_GET['AddressInput'] ?? '');
-    $country = $_GET['CountrySelect'] ?? '';
-    $zipCode = trim($_GET['ZipCodeInput'] ?? '');
-    $languages = $_GET['LanguageInput'] ?? [];
-    $gender = $_GET['GenderSelect'] ?? '';
-    $education = $_GET['EducationSelect'] ?? '';
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    var_dump($firstName);
+<script>
+    // document.getElementById('RegistrationForm').addEventListener('submit', async function (e) {
+    //     e.preventDefault(); // กัน refresh หน้า
+    //     console.log('Submitting form...');
 
-    $errors = [];
+    //     const form = e.currentTarget;
+    //     const formData = new FormData(form);
 
-    // Validate First Name
-    if (empty($firstName)) {
-        $errors[] = "First name is required";
-    } elseif (!preg_match("/^[a-zA-Z\s]+$/", $firstName)) {
-        $errors[] = "First name should only contain letters and spaces";
-    }
+    //     try {
+    //         const res = await fetch(form.action + '?ajax=1', {
+    //             method: 'POST',
+    //             body: formData
+    //         });
+    //         const html = await res.text(); // สมมติ backend ส่ง HTML สรุป/หรือ error list กลับมา
+    //         // document.getElementById('resultArea').innerHTML = html;
 
-    // Validate Last Name
-    if (empty($lastName)) {
-        $errors[] = "Last name is required";
-    } elseif (!preg_match("/^[a-zA-Z\s]+$/", $lastName)) {
-        $errors[] = "Last name should only contain letters and spaces";
-    }
-
-    // Validate Email
-    if (empty($email)) {
-        $errors[] = "Email is required";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Invalid email format";
-    }
-
-    // Validate Address
-    if (empty($address)) {
-        $errors[] = "Address is required";
-    }
-
-    // Validate Country
-    if (empty($country) || $country === 'select') {
-        $errors[] = "Please select a country";
-    }
-
-    // Validate ZIP Code
-    if (empty($zipCode)) {
-        $errors[] = "ZIP code is required";
-    } elseif (!preg_match("/^[0-9]{5}(-[0-9]{4})?$/", $zipCode)) {
-        $errors[] = "Invalid ZIP code format";
-    }
-
-    // Validate Gender
-    if (empty($gender)) {
-        $errors[] = "Please select a gender";
-    }
-
-    // Validate Education
-    if (empty($education) || $education === 'select') {
-        $errors[] = "Please select an education level";
-    }
-
-    // Display results
-    if (empty($errors)) {
-        echo "<div class='alert alert-success'>Registration successful!</div>";
-        echo "<p><strong>Name:</strong> $firstName $lastName</p>";
-        echo "<p><strong>Email:</strong> $email</p>";
-        echo "<p><strong>Address:</strong> $address</p>";
-        echo "<p><strong>Country:</strong> $country</p>";
-        echo "<p><strong>ZIP Code:</strong> $zipCode</p>";
-        echo "<p><strong>Languages:</strong> " . implode(", ", $languages) . "</p>";
-        echo "<p><strong>Gender:</strong> $gender</p>";
-        echo "<p><strong>Education:</strong> $education</p>";
-    } else {
-        echo "<div class='alert alert-danger'>";
-        echo "<h4>Please fix the following errors:</h4>";
-        echo "<ul>";
-        foreach ($errors as $error) {
-            echo "<li>$error</li>";
+    //         // ถ้าอยากโชว์ toast ของ Bootstrap
+    //         const toastEl = document.getElementById('liveToast');
+    //         if (toastEl) {
+    //             const toast = new bootstrap.Toast(toastEl);
+    //             toast.show();
+    //         }
+    //     } catch (err) {
+    //         // document.getElementById('resultArea').innerHTML =
+    //         //     `<div class="alert alert-danger">เกิดข้อผิดพลาดในการส่งข้อมูล</div>`;
+    //     }
+    // });
+    // Form validation function
+    function validateForm() {
+        const errors = [];
+        
+        // Get form values
+        const firstName = $('#FirstNameInput').val().trim();
+        const lastName = $('#LastNameInput').val().trim();
+        const email = $('#EmailInput').val().trim();
+        const address = $('#AddressInput').val().trim();
+        const country = $('#CountrySelect').val();
+        const zipCode = $('#ZIPCodeInput').val().trim();
+        const gender = $('input[name="radioDefault"]:checked').val();
+        const education = $('#EducationSelect').val();
+        
+        // Clear previous error states
+        $('.form-control, .form-select').removeClass('is-invalid');
+        $('.invalid-feedback').remove();
+        
+        // Validate first name
+        if (firstName === '') {
+            errors.push({ field: 'FirstNameInput', message: 'First name is required' });
+        } else if (!/^[\p{L}\s]+$/u.test(firstName)) {
+            errors.push({ field: 'FirstNameInput', message: 'First name should only contain letters and spaces' });
         }
-        echo "</ul>";
-        echo "</div>";
+        
+        // Validate last name
+        if (lastName === '') {
+            errors.push({ field: 'LastNameInput', message: 'Last name is required' });
+        } else if (!/^[\p{L}\s]+$/u.test(lastName)) {
+            errors.push({ field: 'LastNameInput', message: 'Last name should only contain letters and spaces' });
+        }
+        
+        // Validate email
+        if (email === '') {
+            errors.push({ field: 'EmailInput', message: 'Email is required' });
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errors.push({ field: 'EmailInput', message: 'Invalid email format' });
+        }
+        
+        // Validate address
+        if (address === '') {
+            errors.push({ field: 'AddressInput', message: 'Address is required' });
+        }
+        
+        // Validate country
+        if (!country || country === 'select') {
+            errors.push({ field: 'CountrySelect', message: 'Please select a country' });
+        }
+        
+        // Validate ZIP code
+        if (zipCode === '') {
+            errors.push({ field: 'ZIPCodeInput', message: 'ZIP code is required' });
+        } else if (!/^\d{5}$/.test(zipCode)) {
+            errors.push({ field: 'ZIPCodeInput', message: 'Invalid ZIP code format' });
+        }
+        
+        // Validate gender
+        if (!gender) {
+            errors.push({ field: 'gender', message: 'Please select a gender' });
+        }
+        
+        // Validate education
+        if (!education || education === 'select') {
+            errors.push({ field: 'EducationSelect', message: 'Please select an education level' });
+        }
+        
+        // Display errors
+        if (errors.length > 0) {
+            errors.forEach(function(error) {
+                const field = $('#' + error.field);
+                field.addClass('is-invalid');
+                field.after('<div class="invalid-feedback">' + error.message + '</div>');
+            });
+            return {status: 'error', message: errors.map(error => error.message).join(', ')};
+        }
+        
+        return true;
     }
-}
-?>
+
+    // Update form submission to include validation
+    $('#RegistrationForm').on('submit', function (e) {
+        e.preventDefault();
+        
+        // Validate form before submission
+        const validationResult = validateForm();
+        if (validationResult.status === 'error') {
+            $('#resultArea').html(validationResult.message || 'Error');
+
+            const $toast = $('#liveToast');
+            $toast.removeClass('text-bg-success text-bg-danger text-bg-warning').addClass('text-bg-danger');
+
+            const toast = new bootstrap.Toast($toast[0]);
+            toast.show();
+        }else {
+            $('#resultArea').html('Successfully Submitted');
+            const $toast = $('#liveToast');
+            $toast.removeClass('text-bg-success text-bg-danger text-bg-warning').addClass('text-bg-success');
+
+            const toast = new bootstrap.Toast($toast[0]);
+            toast.show();
+        }
+
+        // const $toast = $('#liveToast');
+        // $toast.removeClass('text-bg-success text-bg-danger text-bg-warning');
+        // $('#resultArea').html(data?.message || 'Error');
+
+
+        // const toast = new bootstrap.Toast($toast[0]);
+        // toast.show();
+
+       
+        
+    });
+
+    
+</script>
