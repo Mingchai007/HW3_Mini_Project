@@ -332,33 +332,31 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="Name" class="form-label">Language</label>
+                            <label for="Name" class="form-label" id="LanguageLabel">Language</label>
 
                             <div class="input-group mb-3 form-check form-check-inline">
                                 <input type="checkbox" class="form-check-input" id="LanguageInput">
                                 <label class="form-check-label mx-2" for="LanguageInput">English</label>
-                                <input type="checkbox" class="form-check-input" id="LanguageInput2">
-                                <label class="form-check-label mx-2" for="LanguageInput2">Thai</label>
+                                <input type="checkbox" class="form-check-input" id="LanguageInput">
+                                <label class="form-check-label mx-2" for="LanguageInput">Thai</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="Name" class="form-label">Gender</label>
+                            <label for="Name" class="form-label" id="GenderLabel">Gender</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault">
                                 <label class="form-check-label" for="radioDefault1">
                                     Male
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault">
                                 <label class="form-check-label" for="radioDefault2">
                                     Female
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault">
                                 <label class="form-check-label" for="radioDefault2">
                                     LGBTQ+
                                 </label>
@@ -454,6 +452,7 @@
         const zipCode = $('#ZIPCodeInput').val().trim();
         const gender = $('input[name="radioDefault"]:checked').val();
         const education = $('#EducationSelect').val();
+        const language = $('#LanguageInput').is(':checked');
         
         // Clear previous error states
         $('.form-control, .form-select').removeClass('is-invalid');
@@ -499,12 +498,16 @@
         
         // Validate gender
         if (!gender) {
-            errors.push({ field: 'gender', message: 'Please select a gender' });
+            errors.push({ field: 'GenderLabel', message: 'Please select a gender' });
         }
         
         // Validate education
         if (!education || education === 'select') {
             errors.push({ field: 'EducationSelect', message: 'Please select an education level' });
+        }
+
+        if (!language) {
+            errors.push({ field: 'LanguageLabel', message: 'Please select at least one language' });
         }
         
         // Display errors
