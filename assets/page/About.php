@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 10vh;">
 
-        <div class="card card-body col-4 text-center">
+        <div class="card card-body col-4 mb-5 text-center">
             <img src="assets/images/unnamed.webp" class="img-fluid" alt="...">
         </div>
 

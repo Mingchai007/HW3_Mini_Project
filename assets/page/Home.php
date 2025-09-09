@@ -19,7 +19,7 @@
 
 <!-- Card Section -->
 <div class="container card-grid">
-    <div class="card">
+    <div class="card_job">
         <div class="card__shine"></div>
         <div class="card__glow"></div>
         <div class="card__content">
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card_job">
         <div class="card__shine"></div>
         <div class="card__glow"></div>
         <div class="card__content">
@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card_job">
         <div class="card__shine"></div>
         <div class="card__glow"></div>
         <div class="card__content">
