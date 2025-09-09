@@ -413,37 +413,9 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-    // document.getElementById('RegistrationForm').addEventListener('submit', async function (e) {
-    //     e.preventDefault(); // กัน refresh หน้า
-    //     console.log('Submitting form...');
-
-    //     const form = e.currentTarget;
-    //     const formData = new FormData(form);
-
-    //     try {
-    //         const res = await fetch(form.action + '?ajax=1', {
-    //             method: 'POST',
-    //             body: formData
-    //         });
-    //         const html = await res.text(); // สมมติ backend ส่ง HTML สรุป/หรือ error list กลับมา
-    //         // document.getElementById('resultArea').innerHTML = html;
-
-    //         // ถ้าอยากโชว์ toast ของ Bootstrap
-    //         const toastEl = document.getElementById('liveToast');
-    //         if (toastEl) {
-    //             const toast = new bootstrap.Toast(toastEl);
-    //             toast.show();
-    //         }
-    //     } catch (err) {
-    //         // document.getElementById('resultArea').innerHTML =
-    //         //     `<div class="alert alert-danger">เกิดข้อผิดพลาดในการส่งข้อมูล</div>`;
-    //     }
-    // });
-    // Form validation function
     function validateForm() {
         const errors = [];
         
-        // Get form values
         const firstName = $('#FirstNameInput').val().trim();
         const lastName = $('#LastNameInput').val().trim();
         const email = $('#EmailInput').val().trim();
@@ -454,54 +426,45 @@
         const education = $('#EducationSelect').val();
         const language = $('#LanguageInput').is(':checked');
         
-        // Clear previous error states
         $('.form-control, .form-select').removeClass('is-invalid');
         $('.invalid-feedback').remove();
         
-        // Validate first name
         if (firstName === '') {
             errors.push({ field: 'FirstNameInput', message: 'First name is required' });
         } else if (!/^[\p{L}\s]+$/u.test(firstName)) {
             errors.push({ field: 'FirstNameInput', message: 'First name should only contain letters and spaces' });
         }
         
-        // Validate last name
         if (lastName === '') {
             errors.push({ field: 'LastNameInput', message: 'Last name is required' });
         } else if (!/^[\p{L}\s]+$/u.test(lastName)) {
             errors.push({ field: 'LastNameInput', message: 'Last name should only contain letters and spaces' });
         }
         
-        // Validate email
         if (email === '') {
             errors.push({ field: 'EmailInput', message: 'Email is required' });
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             errors.push({ field: 'EmailInput', message: 'Invalid email format' });
         }
         
-        // Validate address
         if (address === '') {
             errors.push({ field: 'AddressInput', message: 'Address is required' });
         }
         
-        // Validate country
         if (!country || country === 'select') {
             errors.push({ field: 'CountrySelect', message: 'Please select a country' });
         }
         
-        // Validate ZIP code
         if (zipCode === '') {
             errors.push({ field: 'ZIPCodeInput', message: 'ZIP code is required' });
         } else if (!/^\d{5}$/.test(zipCode)) {
             errors.push({ field: 'ZIPCodeInput', message: 'Invalid ZIP code format' });
         }
         
-        // Validate gender
         if (!gender) {
             errors.push({ field: 'GenderLabel', message: 'Please select a gender' });
         }
         
-        // Validate education
         if (!education || education === 'select') {
             errors.push({ field: 'EducationSelect', message: 'Please select an education level' });
         }
@@ -510,7 +473,6 @@
             errors.push({ field: 'LanguageLabel', message: 'Please select at least one language' });
         }
         
-        // Display errors
         if (errors.length > 0) {
             errors.forEach(function(error) {
                 const field = $('#' + error.field);
@@ -523,11 +485,9 @@
         return true;
     }
 
-    // Update form submission to include validation
     $('#RegistrationForm').on('submit', function (e) {
         e.preventDefault();
         
-        // Validate form before submission
         const validationResult = validateForm();
         if (validationResult.status === 'error') {
             $('#resultArea').html(validationResult.message || 'Error');
@@ -546,13 +506,7 @@
             toast.show();
         }
 
-        // const $toast = $('#liveToast');
-        // $toast.removeClass('text-bg-success text-bg-danger text-bg-warning');
-        // $('#resultArea').html(data?.message || 'Error');
-
-
-        // const toast = new bootstrap.Toast($toast[0]);
-        // toast.show();
+      
 
        
         
